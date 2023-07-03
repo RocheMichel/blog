@@ -1,12 +1,14 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 session_start();
-$action = filter_intput(INTPUT_GET,'action', filter_sanitize_string);
+$action = filter_input(INPUT_POST,'action',FILTER_SANITIZE_URL);
 
 $routes =[
-    ''  => 'home.php',
-    'home' => 'home.php',
-    'contact' => 'contact.php',
-    'about' => 'about.php'
+    '' => 'app/controllers/homeController.php',
+    'index' => 'app/controllers/homeController.php',
     //ajoutez d'autres routes ici
 ];
 
@@ -18,5 +20,3 @@ if(!array_key_exists($action, $routes)){
     //Si la page demandée existe dans $route inclure le fichier php correspondant
     include $routes[$action];
 }
-
-?>
