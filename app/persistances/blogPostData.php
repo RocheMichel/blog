@@ -1,6 +1,6 @@
 <?php
 include 'config/database.php';
-function lastBlogPosts(): array
+function lastBlogPost(): array
 {
     return [];
 }
