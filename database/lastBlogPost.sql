@@ -2,6 +2,7 @@ SELECT
     article.title,
     article.content,
     author.name
+
 FROM
     article
         INNER JOIN
@@ -10,3 +11,4 @@ ORDER BY
     article.publication_date DESC
     LIMIT
     10;
+
