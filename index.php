@@ -4,11 +4,13 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 session_start();
-$action = filter_input(INPUT_POST,'action',FILTER_SANITIZE_URL);
+$action = filter_input(INPUT_GET,'action',FILTER_SANITIZE_URL);
 
 $routes =[
     '' => 'app/controllers/homeController.php',
     'index' => 'app/controllers/homeController.php',
+    'home' => 'app/ressources/views/layouts/home.tpl.php',
+    'blogPost' =>'app/controllers/blogPostController.php',
     //ajoutez d'autres routes ici
 ];
 

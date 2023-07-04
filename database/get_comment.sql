@@ -1,9 +1,6 @@
 SELECT
-    article.title,
-    article.content,
-    article.author_id,
     comment.content,
-    comment.author_id
+    comment.author
 FROM
     article
         INNER JOIN
