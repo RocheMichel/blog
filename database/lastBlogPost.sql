@@ -1,12 +1,12 @@
-﻿SELECT
+SELECT
     article.title,
     article.content,
     author.name
 FROM
     article
-INNER JOIN
+        INNER JOIN
     author ON article.author_id = author.id
 ORDER BY
     article.publication_date DESC
-LIMIT
+    LIMIT
     10;

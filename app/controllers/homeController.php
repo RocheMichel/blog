@@ -1,4 +1,4 @@
 <?php
 include 'app/persistances/blogPostData.php';
-$articlesData = lastBlogPosts();
+$articlesData = lastBlogPost($pdo);
 var_dump($articlesData);
