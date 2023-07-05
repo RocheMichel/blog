@@ -13,11 +13,11 @@ function lastBlogPost($pdo): array
 
 //Cette fonction me renvoie les commentaire avec le contenue le titre de l'article
 // et le pseudo de l'auteur qui à écrit le commentaire dans la pageblog_art_com.php
-function get_comment($pdo,$numeroCommentaire): array
+function get_comment($pdo,$numeroArticle): array
 {
     $requestcontent = file_get_contents("database/get_comment.sql");
     $rawcontent = $pdo->prepare($requestcontent);
-    $rawcontent ->bindValue('id_com',$numeroCommentaire,PDO::PARAM_INT);
+    $rawcontent ->bindValue('id_Art',$numeroArticle,PDO::PARAM_INT);
     $rawcontent->execute();
     return $rawcontent->fetchAll(PDO::FETCH_ASSOC);
 }

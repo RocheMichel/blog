@@ -5,8 +5,8 @@ include 'app/persistances/blogPostData.php';
 //on définie les variables utiles pour le views
 
 
-$articlesData = get_article($pdo,$_GET['id']);
-$comment = get_comment($pdo);
+$article = get_article($pdo,$_GET['id']);
+$comments = get_comment($pdo,$_GET['id']);
 
 
 //j'importe les pages de HTML

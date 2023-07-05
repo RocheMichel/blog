@@ -1,6 +1,4 @@
-<?php
-include 'ressource/views/layouts/header.tpl.php';
-?>
+
 <main>
 
     <h1>Article du blog</h1>
@@ -26,8 +24,6 @@ include 'ressource/views/layouts/header.tpl.php';
 
 </main>
 
-<?php
-include 'ressource/views/layouts/footer.tpl.php';
-?>
+
 
 

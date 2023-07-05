@@ -9,4 +9,4 @@ FROM
         INNER JOIN
     article ON comment.article_id = article.id
 WHERE
-        article.id = :id_com;
+        article.id = :id_Art;
