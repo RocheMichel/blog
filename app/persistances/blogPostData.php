@@ -33,4 +33,12 @@ function get_article($pdo,$numeroArticle): array
     $rawcontent->execute();
     return $rawcontent->fetch(PDO::FETCH_ASSOC);
 }
-
+//Je vais créer une fonction qui va permetre déffacer un article qui s'appelle blogPostDelete
+function delete_article($pdo, $numeroArticle):bool
+{
+    $requestcontent = file_get_contents("database/deletearticle.sql");
+    $rawcontent = $pdo->prepare($requestcontent);
+    $rawcontent ->bindValue('id_Art',$numeroArticle,PDO::PARAM_INT);
+    $rawcontent->execute();
+    return true;
+}

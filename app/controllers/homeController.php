@@ -1,4 +1,3 @@
-//Cette page homeController.php va m'envoyer la vue de la page d'acceuil
 <?php
 //En dessus j'appel la fonction lastblogPost qui ce trouve dans lastBlogpost.sql
 //ça me permet d'aller chercher les élément qui ce trouve dans ma base de donnée
