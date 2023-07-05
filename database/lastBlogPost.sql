@@ -1,6 +1,7 @@
 SELECT
     article.title,
     article.content,
+    article.id,
     author.name
 
 FROM

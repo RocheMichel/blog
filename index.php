@@ -11,6 +11,7 @@ $routes =[
     'index' => 'app/controllers/homeController.php',
     'home' => 'app/controllers/homeController.php',
     'blogPost' =>'app/controllers/blogPostController.php',
+    'deletepost' =>'app/controllers/blogPostDeleteController.php',
     //ajoutez d'autres routes ici
 ];
 

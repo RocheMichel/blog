@@ -20,7 +20,7 @@
                 <p>
                     <?php echo $article['name'] ?>
                 </p>
-
+                <a href="?action=deletepost&id=<?php echo $article['id']?>"><input type="submit" value="Suprimer l'article"></a>
             </article>
 
 

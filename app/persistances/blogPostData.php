@@ -42,3 +42,11 @@ function delete_article($pdo, $numeroArticle):bool
     $rawcontent->execute();
     return true;
 }
+function “blogPostCreate”($pdo, $numeroArticle):bool
+{
+    $requestcontent = file_get_contents("database/deletearticle.sql");
+    $rawcontent = $pdo->prepare($requestcontent);
+    $rawcontent ->bindValue('id_Art',$numeroArticle,PDO::PARAM_INT);
+    $rawcontent->execute();
+    return true;
+}
