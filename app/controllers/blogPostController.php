@@ -7,11 +7,7 @@ include 'app/persistances/blogPostData.php';
 
 $articlesData = get_article($pdo,$_GET['id']);
 $comment = get_comment($pdo);
-//$comment['content'] = 'content';
-//$comment['author_id'] = 'author_id';
-//$articlesData[0]['name'] = 'Flori';
-//$articlesData[0]['first_name'] = 'Aurélien';
-//$articlesData[0]['Pseudo'] = 'asmuro';
+
 
 //j'importe les pages de HTML
 include 'ressource/views/layouts/header.tpl.php';

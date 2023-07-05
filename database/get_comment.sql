@@ -1,9 +1,12 @@
 SELECT
     comment.content,
-    comment.author
+    article.title,
+    author.Pseudo
 FROM
-    article
+    comment
         INNER JOIN
-    comment ON article.id = comment.article_id
+    author ON author.id = comment.author_id
+        INNER JOIN
+    article ON comment.article_id = article.id
 WHERE
-        article.id = ?
+        article.id = :id_com;

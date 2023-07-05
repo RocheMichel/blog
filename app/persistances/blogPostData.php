@@ -11,17 +11,20 @@ function lastBlogPost($pdo): array
     return $rawcontent->fetchAll(PDO::FETCH_ASSOC);
 }
 
-//fonction blogPostByld qui ...
-function get_comment($pdo): array
+//Cette fonction me renvoie les commentaire avec le contenue le titre de l'article
+// et le pseudo de l'auteur qui à écrit le commentaire dans la pageblog_art_com.php
+function get_comment($pdo,$numeroCommentaire): array
 {
     $requestcontent = file_get_contents("database/get_comment.sql");
     $rawcontent = $pdo->prepare($requestcontent);
+    $rawcontent ->bindValue('id_com',$numeroCommentaire,PDO::PARAM_INT);
     $rawcontent->execute();
     return $rawcontent->fetchAll(PDO::FETCH_ASSOC);
 }
 
 
-//fonction qui renvoie la page blogPostByld.php
+//Cette fonction va être utilisé dans la page home.tpl.php
+// pour afficher les article avec le nom d l'author
 function get_article($pdo,$numeroArticle): array
 {
     $requestcontent = file_get_contents("database/get_article.sql");

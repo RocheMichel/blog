@@ -3,7 +3,7 @@ include 'ressource/views/layouts/header.tpl.php';
 ?>
 <main>
 
-    <h1>Le blog</h1>
+    <h1>Article du blog</h1>
 
     <?php if($articlesData===[]): ?>
         <h2>il n'y a pas d'articles</h2

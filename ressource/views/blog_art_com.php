@@ -1,28 +1,26 @@
+<?php
+include 'ressource/views/layouts/header.tpl.php';
+?>
+
 <main>
 
-    <h1>Le blog</h1>
+    <h1>Commentaire du blog</h1>
 
-    <?php if($articlesData===[]): ?>
-        <h2>il n'y a pas d'articles</h2
+    <?php if($commentData===[]): ?>
+        <h2>il n'y a pas de commentaire</h2
     <?php else: ?>
-
-            <article>
                 <h2>
-                    <?php echo $articlesData['title'] ?>
+                    <?php echo $commentData['title'] ?>
                 </h2>
                 <p>
-                    <?php echo $articlesData['content'] ?>
+                    <?php echo $commentData['content'] ?>
                 </p>
                 <p>
-                    <?php echo $articlesData['name'] ?>
+                    <?php echo $commentData['Pseudo'] ?>
                 </p>
-            </article>
-            <p>
-                <?php echo $comment['content'] ?>
-            </p>
-            <p>
-                <?php echo $comment['author_id'] ?>
-            </p>
     <?php endif ?>
 
 </main>
+<?php
+include 'ressource/views/layouts/footer.tpl.php';
+?>

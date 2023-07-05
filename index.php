@@ -9,7 +9,7 @@ $action = filter_input(INPUT_GET,'action',FILTER_SANITIZE_URL);
 $routes =[
     '' => 'app/controllers/homeController.php',
     'index' => 'app/controllers/homeController.php',
-    'home' => 'app/ressources/views/layouts/home.tpl.php',
+    'home' => 'app/controllers/homeController.php',
     'blogPost' =>'app/controllers/blogPostController.php',
     //ajoutez d'autres routes ici
 ];
