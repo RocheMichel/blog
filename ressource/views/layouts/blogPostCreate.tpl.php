@@ -23,17 +23,17 @@
     <legend>Nom de l'auteur</legend>
 
     <div>
-        <input type="radio" id="author_id1" name="author_id" value="last_name"
+        <input type="radio" id="author_id1" name="author_id" value="1"
                checked>
         <label for="author_id">Michel</label>
     </div>
     <div>
-        <input type="radio" id="author_id2" name="author_id" value="last_name"
+        <input type="radio" id="author_id2" name="author_id" value="2"
                checked>
         <label for="author_id">Mitchi</label>
     </div>
     <div>
-        <input type="radio" id="author_id" name="author_id" value="last_name"
+        <input type="radio" id="author_id" name="author_id" value="3"
                checked>
         <label for="author_id">Mickelini</label>
     </div>
