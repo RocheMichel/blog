@@ -12,6 +12,7 @@ $routes =[
     'home' => 'app/controllers/homeController.php',
     'blogPost' =>'app/controllers/blogPostController.php',
     'deletepost' =>'app/controllers/blogPostDeleteController.php',
+    'blogPostCreate' => 'app/controllers/blogPostCreateController.php',
     //ajoutez d'autres routes ici
 ];
 

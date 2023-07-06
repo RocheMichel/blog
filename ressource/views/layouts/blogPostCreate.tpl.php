@@ -1,8 +1,8 @@
 
-<form action="" method="get" class="form-example">
+<form action="" method="post" class="form-example">
     <div class="form-example">
-        <label for="name">Enter your name: </label>
-        <input type="text" name="name" id="name" required>
+        <label for="title">Enter your name: </label>
+        <input type="text" name="" id="name" required>
     </div>
     <div class="form-example">
         <label for="email">Enter your email: </label>

@@ -10,15 +10,15 @@
         <?php foreach ($articlesData as $article) :?>
             <article>
                 <h2>
-                    <?php echo $article['title'] ?>
+                    <?= $article['title'] ?>
                 </h2>
 
                 <p>
-                    <?php echo $article['content'] ?>
+                    <?= $article['content'] ?>
                 </p>
 
                 <p>
-                    <?php echo $article['name'] ?>
+                    <?= $article['name'] ?>
                 </p>
                 <a href="?action=deletepost&id=<?php echo $article['id']?>"><input type="submit" value="Suprimer l'article"></a>
             </article>

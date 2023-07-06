@@ -42,11 +42,16 @@ function delete_article($pdo, $numeroArticle):bool
     $rawcontent->execute();
     return true;
 }
-function “blogPostCreate”($pdo, $numeroArticle):bool
+//cette fonction me permet de créer un article
+function blogPostCreate($pdo, $title,$content,$raking,$publication_date,$author_id):bool
 {
-    $requestcontent = file_get_contents("database/deletearticle.sql");
+    $requestcontent = file_get_contents("database/create.sql");
     $rawcontent = $pdo->prepare($requestcontent);
-    $rawcontent ->bindValue('id_Art',$numeroArticle,PDO::PARAM_INT);
+    $rawcontent->bindValue('title', $title, PDO::PARAM_STR);
+    $rawcontent->bindValue('content', $content, PDO::PARAM_STR);
+    $rawcontent->bindValue('raking', $raking, PDO::PARAM_INT);
+    $rawcontent->bindValue('publication_date', $publication_date, PDO::PARAM_STR);
+    $rawcontent->bindValue('author_id', $author_id, PDO::PARAM_INT);
     $rawcontent->execute();
     return true;
 }
